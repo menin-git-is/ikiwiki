@@ -57,6 +57,7 @@ sub format (@) {
 	my $startlevel=($params{startlevel} ? $params{startlevel} : 0);
 	my $curlevel=$startlevel-1;
 	my $liststarted=0;
+	my $headercollect=0;
 	my $indent=sub { "\t" x $curlevel };
 	$p->handler(start => sub {
 		my $tagname=shift;
@@ -65,7 +66,7 @@ sub format (@) {
 			my $level=$1;
 			my $anchor="index".++$anchors{$level}."h$level";
 			$page.="$text<a name=\"$anchor\"></a>";
-	
+			
 			# Unless we're given startlevel as a parameter,
 			# take the first header level seen as the topmost level,
 			# even if there are higher levels seen later on.
@@ -106,7 +107,8 @@ sub format (@) {
 			$liststarted=0;
 			$index.=&$indent."<li class=\"L$curlevel\">".
 				"<a href=\"#$anchor\">";
-	
+			
+			$headercollect=1;
 			$p->handler(text => sub {
 				$page.=join("", @_);
 				$index.=join("", @_);
@@ -117,12 +119,17 @@ sub format (@) {
 					$p->handler(text => undef);
 					$p->handler(end => undef);
 					$index.="</a>\n";
+					$headercollect=0;
+				}
+				else {
+				    $index.=join("",@_);
 				}
 				$page.=join("", @_);
 			}, "tagname, text");
 		}
 		else {
 			$page.=$text;
+			$index.=$text if ($headercollect);
 		}
 	}, "tagname, text");
 	$p->handler(default => sub { $page.=join("", @_) }, "text");
