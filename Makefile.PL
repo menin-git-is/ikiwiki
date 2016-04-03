@@ -116,10 +116,10 @@ underlay_install:
 	for theme in themes/*; do \
 		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/$$theme; \
 		for file in $$theme/*; do \
-			if echo "$$file" | grep -q style.css; then \
-				(cat doc/style.css; cat $$theme/base.css 2>/dev/null; cat $$file) > $(DESTDIR)$(PREFIX)/share/ikiwiki/$$theme/style.css; \
-			elif echo "$$file" | grep -q fullstyle.css; then \
+			if echo "$$file" | grep -q fullstyle.css; then \
 				cp $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$theme/style.css; \
+			elif echo "$$file" | grep -q style.css; then \
+				(cat doc/style.css; cat $$theme/base.css 2>/dev/null; cat $$file) > $(DESTDIR)$(PREFIX)/share/ikiwiki/$$theme/style.css; \
 			elif echo "$$file" | grep -q base.css; then \
 				:; \
 			elif [ -f "$$file" ]; then \
