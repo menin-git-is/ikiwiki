@@ -1,5 +1,10 @@
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5><article class="inlinepage"><TMPL_ELSE><div class="inlinepage"></TMPL_IF>
+<TMPL_ELSE>
+<article class="inlinepage card">
+</TMPL_UNLESS>
 
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5><section class="inlineheader"><TMPL_ELSE><div class="inlineheader"></TMPL_IF>
 <TMPL_IF AUTHOR>
 <span class="author">
@@ -11,30 +16,75 @@
 </span>
 </TMPL_IF>
 <TMPL_IF HTML5><header class="header"><TMPL_ELSE><span class="header"></TMPL_IF>
+<TMPL_ELSE>
+<div class="inlineheader card-header">
+<header title="<TMPL_VAR TITLE>">
+</TMPL_UNLESS>
 <TMPL_IF PERMALINK>
 <a href="<TMPL_VAR PERMALINK>"><TMPL_VAR TITLE></a>
 <TMPL_ELSE>
 <a href="<TMPL_VAR PAGEURL>"><TMPL_VAR TITLE></a>
 </TMPL_IF>
 <TMPL_IF HTML5></header><TMPL_ELSE></span></TMPL_IF>
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
+</TMPL_UNLESS>
 
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5><section class="inlinecontent"><TMPL_ELSE><div class="inlinecontent"></TMPL_IF>
+<TMPL_ELSE>
+<TMPL_IF HAVE_ACTIONS>
+<div class="inline-actions">
+<ul>
+<TMPL_IF EDITURL>
+<li><a href="<TMPL_VAR EDITURL>" rel="nofollow"><i class="fa fa-pencil"></i>Edit</a></li>
+</TMPL_IF>
+<TMPL_IF COMMENTSLINK>
+<li><TMPL_VAR COMMENTSLINK></li>
+<TMPL_ELSE>
+<TMPL_IF DISCUSSIONLINK>
+<li><TMPL_VAR DISCUSSIONLINK></li>
+</TMPL_IF>
+</TMPL_IF>
+</ul>
+</div>
+</TMPL_IF>
+</div>
+
+<div class="inlinecontent card-block card-text">
+</TMPL_UNLESS>
 <TMPL_VAR CONTENT>
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
+<TMPL_ELSE>
+</div>
+</TMPL_UNLESS>
 
 <TMPL_IF ENCLOSURE>
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5><section id="inlineenclosure"><TMPL_ELSE><div id="inlineenclosure"></TMPL_IF>
+<TMPL_ELSE>
+<div id="inlineenclosure">
+</TMPL_UNLESS>
 <a href="<TMPL_VAR ENCLOSURE>">Download</a>
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
+<TMPL_ELSE>
+</div>
+</TMPL_UNLESS>
 </TMPL_IF>
 
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5><footer class="inlinefooter"><TMPL_ELSE><div class="inlinefooter"></TMPL_IF>
-
+<TMPL_ELSE>
+<footer class="inlinefooter card-footer text-muted">
+<div class="pageinfo">
+</TMPL_UNLESS>
 <span class="pagedate">
 Posted <TMPL_VAR CTIME>
 </span>
 
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF TAGS>
 <TMPL_IF HTML5><nav class="tags"><TMPL_ELSE><span class="tags"></TMPL_IF>
 Tags:
@@ -43,19 +93,46 @@ Tags:
 </TMPL_LOOP>
 <TMPL_IF HTML5></nav><TMPL_ELSE></span></TMPL_IF>
 </TMPL_IF>
+</TMPL_UNLESS>
+
+<TMPL_IF THEME_BOOTSTRAP>
+<TMPL_IF AUTHOR>
+by
+<span class="author">
+<TMPL_IF AUTHORURL>
+<a href="<TMPL_VAR AUTHORURL>"><TMPL_VAR AUTHOR></a>
+<TMPL_ELSE>
+<TMPL_VAR AUTHOR>
+</TMPL_IF>
+</span>
+</TMPL_IF>
+</TMPL_IF>
 
 <TMPL_IF COPYRIGHT>
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <div class="pagecopyright">
 <TMPL_VAR COPYRIGHT>
 </div>
+<TMPL_ELSE>
+<span class="pagecopyright">
+<TMPL_VAR COPYRIGHT>
+</span>
+</TMPL_UNLESS>
 </TMPL_IF>
 
 <TMPL_IF LICENSE>
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <div class="pagelicense">
 License: <TMPL_VAR LICENSE>
 </div>
+<TMPL_ELSE>
+<span class="pagelicense">
+License: <TMPL_VAR LICENSE>
+</span>
+</TMPL_UNLESS>
 </TMPL_IF>
 
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HAVE_ACTIONS>
 <TMPL_IF HTML5><nav class="actions"><TMPL_ELSE><div class="actions"></TMPL_IF>
 <ul>
@@ -76,3 +153,17 @@ License: <TMPL_VAR LICENSE>
 <TMPL_IF HTML5></footer><TMPL_ELSE></div></TMPL_IF>
 
 <TMPL_IF HTML5></article><TMPL_ELSE></div></TMPL_IF>
+
+<TMPL_ELSE>
+
+<TMPL_IF TAGS>
+<nav class="tags">
+<i class="fa fa-tag"></i>Tags:
+<TMPL_LOOP TAGS>
+<TMPL_VAR LINK>
+</TMPL_LOOP>
+</nav>
+</TMPL_IF>
+</footer>
+</article>
+</TMPL_UNLESS>

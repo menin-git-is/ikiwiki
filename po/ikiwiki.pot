@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-21 09:43+0000\n"
+"POT-Creation-Date: 2016-04-03 20:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -244,66 +244,66 @@ msgstr ""
 msgid "Comment Moderation"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:381 ../IkiWiki/Plugin/comments.pm:385
+#: ../IkiWiki/Plugin/comments.pm:382 ../IkiWiki/Plugin/comments.pm:386
 msgid "email replies to me"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:419 ../IkiWiki/Plugin/editpage.pm:96
+#: ../IkiWiki/Plugin/comments.pm:420 ../IkiWiki/Plugin/editpage.pm:96
 #: ../IkiWiki/Plugin/editpage.pm:102
 msgid "bad page name"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:422
+#: ../IkiWiki/Plugin/comments.pm:423
 #, perl-format
 msgid "commenting on %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:439
+#: ../IkiWiki/Plugin/comments.pm:440
 #, perl-format
 msgid "page '%s' doesn't exist, so you can't comment"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:449
+#: ../IkiWiki/Plugin/comments.pm:450
 #, perl-format
 msgid "comments on page '%s' are not allowed"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:456
+#: ../IkiWiki/Plugin/comments.pm:457
 #, perl-format
 msgid "comments on page '%s' are closed"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:583
+#: ../IkiWiki/Plugin/comments.pm:584
 msgid "comment stored for moderation"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:585
+#: ../IkiWiki/Plugin/comments.pm:586
 msgid "Your comment will be posted after moderator review"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:598
+#: ../IkiWiki/Plugin/comments.pm:599
 msgid "Added a comment"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:602
+#: ../IkiWiki/Plugin/comments.pm:603
 #, perl-format
 msgid "Added a comment: %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:676 ../IkiWiki/Plugin/userlist.pm:55
+#: ../IkiWiki/Plugin/comments.pm:677 ../IkiWiki/Plugin/userlist.pm:55
 #: ../IkiWiki/Plugin/websetup.pm:272
 msgid "you are not logged in as an admin"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:735
+#: ../IkiWiki/Plugin/comments.pm:736
 msgid "Comment moderation"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:776
+#: ../IkiWiki/Plugin/comments.pm:777
 msgid "comment moderation"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:941
+#: ../IkiWiki/Plugin/comments.pm:942
 #, perl-format
 msgid "%i comment"
 msgid_plural "%i comments"
@@ -313,7 +313,7 @@ msgstr[1] ""
 #. translators: Here "Comment" is a verb;
 #. translators: the user clicks on it to
 #. translators: post a comment.
-#: ../IkiWiki/Plugin/comments.pm:951
+#: ../IkiWiki/Plugin/comments.pm:952
 msgid "Comment"
 msgstr ""
 
@@ -347,14 +347,14 @@ msgstr ""
 msgid "email comments to me"
 msgstr ""
 
-#: ../IkiWiki/Plugin/editpage.pm:319
+#: ../IkiWiki/Plugin/editpage.pm:320
 #, perl-format
 msgid "creating %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/editpage.pm:337 ../IkiWiki/Plugin/editpage.pm:356
-#: ../IkiWiki/Plugin/editpage.pm:367 ../IkiWiki/Plugin/editpage.pm:414
-#: ../IkiWiki/Plugin/editpage.pm:456
+#: ../IkiWiki/Plugin/editpage.pm:338 ../IkiWiki/Plugin/editpage.pm:357
+#: ../IkiWiki/Plugin/editpage.pm:368 ../IkiWiki/Plugin/editpage.pm:415
+#: ../IkiWiki/Plugin/editpage.pm:457
 #, perl-format
 msgid "editing %s"
 msgstr ""
@@ -560,15 +560,15 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: ../IkiWiki/Plugin/loginselector.pm:107
+#: ../IkiWiki/Plugin/loginselector.pm:106
 msgid "Password"
 msgstr ""
 
-#: ../IkiWiki/Plugin/mdwn.pm:52
+#: ../IkiWiki/Plugin/mdwn.pm:53
 msgid "multimarkdown is enabled, but Text::MultiMarkdown is not installed"
 msgstr ""
 
-#: ../IkiWiki/Plugin/mdwn.pm:97
+#: ../IkiWiki/Plugin/mdwn.pm:98
 #, perl-format
 msgid "failed to load Markdown.pm perl module (%s) or /usr/bin/markdown (%s)"
 msgstr ""
@@ -956,24 +956,24 @@ msgstr ""
 msgid "rename %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:164
+#: ../IkiWiki/Plugin/rename.pm:165
 msgid "Also rename SubPages and attachments"
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:266
+#: ../IkiWiki/Plugin/rename.pm:267
 msgid "Only one attachment can be renamed at a time."
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:269
+#: ../IkiWiki/Plugin/rename.pm:270
 msgid "Please select the attachment to rename."
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:379
+#: ../IkiWiki/Plugin/rename.pm:380
 #, perl-format
 msgid "rename %s to %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:605
+#: ../IkiWiki/Plugin/rename.pm:606
 #, perl-format
 msgid "update for rename of %s to %s"
 msgstr ""

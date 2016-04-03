@@ -1,8 +1,23 @@
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <div <TMPL_IF ID>id="<TMPL_VAR ID ESCAPE=HTML>"</TMPL_IF> class="feedlink">
+<TMPL_ELSE>
+<div <TMPL_IF ID>id="<TMPL_VAR ID ESCAPE=HTML>"</TMPL_IF> class="feedlink btn-group">
+</TMPL_UNLESS>
 <TMPL_IF RSSURL>
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <a class="feedbutton" type="application/rss+xml" rel="alternate" title="<TMPL_VAR RSSDESC>" href="<TMPL_VAR RSSURL>">RSS</a>
+<TMPL_ELSE>
+<a class="feedbutton btn btn-secondary" type="application/rss+xml" rel="alternate" title="<TMPL_VAR RSSDESC>" href="<TMPL_VAR RSSURL>"><i class="fa fa-rss"></i>RSS</a>
+</TMPL_UNLESS>
 </TMPL_IF>
 <TMPL_IF ATOMURL>
+<TMPL_UNLESS THEME_BOOTSTRAP>
 <a class="feedbutton" type="application/atom+xml" rel="alternate" title="<TMPL_VAR ATOMDESC>" href="<TMPL_VAR ATOMURL>">Atom</a>
+<TMPL_ELSE>
+<a class="feedbutton btn btn-secondary" type="application/atom+xml" rel="alternate" title="<TMPL_VAR ATOMDESC>" href="<TMPL_VAR ATOMURL>"><i class="fa fa-rss"></i>Atom</a>
+</TMPL_UNLESS>
 </TMPL_IF>
 </div>
+<TMPL_IF THEME_BOOTSTRAP>
+<p>
+</TMPL_IF>

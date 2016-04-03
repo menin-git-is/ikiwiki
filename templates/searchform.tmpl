@@ -1,6 +1,10 @@
-<form method="get" action="<TMPL_VAR SEARCHACTION>" id="searchform">
-<div>
-<input type="text" id="searchbox" name="P" value="" size="16"
-  placeholder="search" />
-</div>
+<form method="get" action="<TMPL_VAR SEARCHACTION>" id="searchform" class="form-inline input-group input-group-sm pull-xs-right">
+<TMPL_UNLESS THEME_BOOTSTRAP><div></TMPL_UNLESS>
+<input type="text" id="searchbox" name="P" value="" size="12" placeholder="search" class="form-control" />
+<TMPL_IF THEME_BOOTSTRAP>
+<span class="input-group-btn">
+<button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
+</span>
+</TMPL_IF>
+<TMPL_UNLESS THEME_BOOTSTRAP></div></TMPL_UNLESS>
 </form>

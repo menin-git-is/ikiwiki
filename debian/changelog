@@ -8,6 +8,8 @@ ikiwiki (3.20160122) UNRELEASED; urgency=medium
   * loginselector: When only openid and emailauth are enabled, but
     passwordauth is not, avoid showing a "Other" box which opens an
     empty form.
+  * Added bootstrap theme, based on ikistrap by Guus Sliepen,
+    and using bootstrap 4. This theme only works in html5 mode.
 
   [ Amitai Schlair ]
   * mdwn: Process .md like .mdwn, but disallow web creation.

@@ -1,8 +1,7 @@
 
-<form method="get" action="https://www.google.com/search" id="searchform">
- <div>
+<form method="get" action="https://www.google.com/search" id="searchform" class="form-inline pull-xs-right">
+ <TMPL_UNLESS THEME_BOOTSTRAP><div></TMPL_UNLESS>
   <input name="sitesearch" value="<TMPL_VAR URL>" type="hidden" />
-  <input name="q" value="" id="searchbox" size="16" maxlength="255" type="text"
-    placeholder="search" />
- </div>
+  <input name="q" value="" id="searchbox" size="12" type="text" placeholder="search" class="form-control" />
+ <TMPL_UNLESS THEME_BOOTSTRAP></div></TMPL_UNLESS>
 </form>
