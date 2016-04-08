@@ -263,26 +263,20 @@
 <TMPL_IF COMMENTS>
 <TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5><section<TMPL_ELSE><div</TMPL_IF> id="comments" role="complementary">
-<TMPL_VAR COMMENTS>
 <TMPL_ELSE>
 <section id="comments" title="Comments">
-<a href="<TMPL_VAR ADDCOMMENTURL>" class="btn btn-primary">Add a comment</a>
-<TMPL_VAR COMMENTS>
 </TMPL_UNLESS>
+<TMPL_VAR COMMENTS>
 <TMPL_IF ADDCOMMENTURL>
-<TMPL_UNLESS THEME_BOOTSTRAP>
 <div class="addcomment">
 <a href="<TMPL_VAR ADDCOMMENTURL>">Add a comment</a>
 </div>
-</TMPL_UNLESS>
 <TMPL_ELSE>
 <div class="addcomment">Comments on this page are closed.</div>
 </TMPL_IF>
 <TMPL_UNLESS THEME_BOOTSTRAP>
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
-<TMPL_VAR COMMENTS>
 <TMPL_ELSE>
-<TMPL_VAR COMMENTS>
 </section>
 </TMPL_UNLESS>
 </TMPL_IF>
