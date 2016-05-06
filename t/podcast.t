@@ -48,9 +48,9 @@ sub podcast {
 
 	my %media_types = (
 		'simplepost'	=> undef,
-		'piano.mp3'	=> 'audio/mpeg',
-		'scroll.3gp'	=> 'video/3gpp',
-		'walter.ogg'	=> 'audio/ogg',
+		'piano.mp3'	=> qr{^audio/mpeg$}s,
+		'scroll.3gp'	=> qr{^video/3gpp$}s,
+		'walter.ogg'	=> qr{^(audio/ogg|video/x-theora\+ogg)$}s,
 	);
 
 	for my $format (qw(atom rss)) {
@@ -90,7 +90,7 @@ sub podcast {
 					qq{$format $title no body text});
 				is($enclosure->url, $url,
 					qq{$format $title enclosure url});
-				is($enclosure->type, $media_types{$title},
+				like($enclosure->type, $media_types{$title},
 					qq{$format $title enclosure type});
 				cmp_ok($enclosure->length, '>', 0,
 					qq{$format $title enclosure length});
@@ -109,7 +109,7 @@ sub podcast {
 					isnt($enclosure, undef,
 						qq{$format $title enclosure});
 					my $filename = basename($enclosure->url);
-					is($enclosure->type, $media_types{$filename},
+					like($enclosure->type, $media_types{$filename},
 						qq{$format $title enclosure type});
 					cmp_ok($enclosure->length, '>', 0,
 						qq{$format $title enclosure length});

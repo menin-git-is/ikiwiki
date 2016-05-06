@@ -1,3 +1,11 @@
+ikiwiki (3.20160506~ppa1) trusty; urgency=medium
+
+  * Untested backport to Ubuntu trusty.
+  * t/podcast.t: work around misidentification of Ogg Vorbis as Ogg Theora
+    by allowing either.
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 06 May 2016 09:16:15 +0100
+
 ikiwiki (3.20160506) unstable; urgency=medium
 
   [ Simon McVittie ]
