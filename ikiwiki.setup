@@ -97,6 +97,9 @@ banned_users:
 - ip(187.209.217.54)
 - https://me.yahoo.com/a/7bUPkZg.gdHGMU8azO0bnVfS23aU5iT7h263LhiVB3r9j6W_yUR9lX1Ia6UJfs247nNtKGg-*
 - ip(136.0.0.90)
+- jhakasbaba76
+- jhakasbaba76@c741fb7726e8ce4a230bc1a0d48fbeb496e46f89
+- ip(110.172.140.98)
 # where the source of the wiki is located
 srcdir: /home/b-ikiwiki/source/doc
 # where to build the wiki
